@@ -1,0 +1,76 @@
+﻿<Window x:Class="RegistroPersonas.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RegistroPersonas"
+        mc:Ignorable="d"
+        Title="Registro de personas" Height="400" Width="450">
+    <StackPanel Margin="50,50,0,0">
+        <!-- ID -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <Label Content="ID" Width="120"/>
+            <TextBox x:Name="IDTextBox" Width="85" Text="{Binding ID}"/>
+            <Button x:Name="BuscarBoton" Width="85" Margin="30,0,0,0" Click="BuscarBoton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="18" Height="18" Source="C:/Users/Jean Carlos/source/repos/RegistroPersonas/Images/search.png"/>
+                    <Label Content="Buscar"/>
+                </StackPanel>
+            </Button>
+        </StackPanel>
+
+        <!-- Nombre -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <Label Content="Nombre" Width="120"/>
+            <TextBox x:Name="NombreTextBox" Width="200" Text="{Binding Nombre}"/>
+        </StackPanel>
+
+        <!-- Telefono -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <Label Content="Telefono" Width="120"/>
+            <TextBox x:Name="TelefonoTextBox" Width="200" Text="{Binding Telefono}"/>
+        </StackPanel>
+
+        <!-- Cedula -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <Label Content="Cedula" Width="120"/>
+            <TextBox x:Name="CedulaTextBox" Width="200" Text="{Binding Cedula}"/>
+        </StackPanel>
+
+        <!-- Direccion -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <Label Content="Direccion" Width="120"/>
+            <TextBox x:Name="DireccionTextBox" Width="200" Text="{Binding Direccion}"/>
+        </StackPanel>
+
+        <!-- FechaNacimiento -->
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <Label Content="Fecha Nacimiento" Width="120"/>
+            <DatePicker x:Name="FechaNacimientoDatePicker" Width="200" SelectedDate="{Binding FechaNacimiento}"/>
+        </StackPanel>
+
+        <!-- Botones -->
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="NuevoBoton" Width="90" Margin="5,0,0,0" Click="NuevoBoton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="18" Height="18" Source="C:/Users/Jean Carlos/source/repos/RegistroPersonas/Images/new.png"/>
+                    <Label Content="Nuevo"/>
+                </StackPanel>
+            </Button>        
+            <Button x:Name="GuardarBoton" Width="90" Margin="20,0,0,0" Click="GuardarBoton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="18" Height="18" Source="C:/Users/Jean Carlos/source/repos/RegistroPersonas/Images/save.png"/>
+                    <Label Content="Guardar"/>
+                </StackPanel>
+            </Button> 
+            <Button x:Name="EliminarBoton" Width="90" Margin="20,0,0,0" Click="EliminarBoton_Click">
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="18" Height="18" Source="C:/Users/Jean Carlos/source/repos/RegistroPersonas/Images/delete.png"/>
+                    <Label Content="Eliminar"/>
+                </StackPanel>
+            </Button> 
+        
+        </StackPanel>
+        
+    </StackPanel>
+</Window>

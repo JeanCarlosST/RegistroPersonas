@@ -8,7 +8,7 @@ namespace RegistroPersonas.DAL{
         {
             base.OnConfiguring(optionsBuilder);
 
-            optionsBuilder.UseSqlite(@"Data Source=Persons.db");
+            optionsBuilder.UseSqlite(@"Data Source= DATA/Persons.db");
         }
     }
 }
